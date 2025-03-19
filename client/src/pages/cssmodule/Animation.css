@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+h1{
+    text-decoration: underline;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid limegreen;
+    margin: 10px 110px; /* Original position */
+    animation: moveAndRotate 3s ease-in-out infinite alternate ;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+.box:hover{
+    animation-play-state: paused;
+    
+    background-image: url("/client/public/ball.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+@keyframes moveAndRotate {
+    0% {
+        transform: translateX(10px) rotate(0deg) scale(.5);
+    }
+    50% {
+        transform: translateX(400px) rotate(180deg) scale(1);
+        border-radius: 80px;
+    }
+    100% {
+        transform: translateX(800px) rotate(360deg);
+    }
+}
