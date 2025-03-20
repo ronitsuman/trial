@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Index from './pages/Index'
 import ResponsiveDesign from './pages/ResponsiveDesign'
 import Animation from './pages/cssmodule/Animation'
+import Framer from './pages/Framer'
 
 
 const App = () => {
@@ -20,6 +21,10 @@ const App = () => {
     {
       path:"/animation",
       element:<Animation/>
+    },
+    {
+      path:"/framer",
+      element:<Framer/>
     },
   ]);
   return (
