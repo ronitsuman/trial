@@ -33,6 +33,40 @@ const Framer = () => {
       >
 
       </motion.div>
+      <motion.div
+      whileFocus={{
+        backgroundColor:'green'
+      }}
+      className='flex items-center justify-center '>
+      <div className='p-22 border w-[600px] h-[400px]'>
+        <h1 className='text-center uppercase'>box Drag animation</h1>
+        <p className='text-center'>just click on box you can move it inside this box  </p>
+        <motion.div
+        drag
+        whileDrag={{
+          color:'red',
+          backgroundColor:"yellow",
+          borderRadius:'50%'
+        }}
+        whileTap={{
+          
+        }}
+        whileHover={{
+          backgroundColor:'green'
+        }}
+        dragConstraints={{
+          left:20,
+          top:20,
+          right:500,
+          bottom:100
+        }}
+        className='w-[100px] h-[200px] border'>
+
+        </motion.div>
+      </div>
+
+      </motion.div>
+      
       <motion.h1
       initial={{
         opacity:0,
